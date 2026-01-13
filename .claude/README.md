@@ -55,7 +55,10 @@ This directory contains **skill files** that teach Claude Code how to perform Sh
 │   ├── bulk-products.md        # Catalog generation
 │   ├── bulk-update-categories.md
 │   ├── import-store.md         # Store migration
-│   └── export-store.md         # Store backup
+│   ├── export-store.md         # Store backup
+│   │
+│   └── # Reference
+│       └── integrations-research.md  # Frontend integrations (Klaviyo, Subscriptions)
 ```
 
 ## MCP Server Configuration

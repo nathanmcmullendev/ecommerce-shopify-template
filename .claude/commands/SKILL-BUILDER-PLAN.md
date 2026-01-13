@@ -22,6 +22,7 @@ Master tracking document for building and enhancing Shopify MCP skills.
 | bulk-update-categories.md | ✅ Good | Low | 2026-01-13 | Verified - taxonomy mapping |
 | import-store.md | ✅ Good | Low | 2026-01-13 | Verified - full import workflow |
 | export-store.md | ✅ Good | Low | 2026-01-13 | Verified - JSON and CSV export |
+| integrations-research.md | ✅ New | Reference | 2026-01-13 | Klaviyo V2, Subscriptions, Recharge - official solutions documented |
 
 **Legend:**
 - ✅ Complete - Fully working, tested, documented
