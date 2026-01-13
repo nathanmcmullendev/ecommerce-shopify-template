@@ -298,60 +298,45 @@ src/
 
 ## Getting Started
 
-### Prerequisites
+**[Complete Setup Guide](docs/SETUP.md)** - Step-by-step instructions with screenshots
 
-- Node.js 18+
-- Shopify store with Storefront API access
-- Cloudinary account (free tier works)
-
-### Installation
+### Quick Start
 
 ```bash
 # Clone
-git clone https://github.com/nathanmcmullendev/ecommerce-react.git
-cd ecommerce-react
+git clone https://github.com/nathanmcmullendev/ecommerce-shopify-template.git
+cd ecommerce-shopify-template
 
 # Install
 npm install
 
-# Configure
+# Configure (see docs/SETUP.md for detailed instructions)
 cp .env.example .env.local
-```
+# Edit .env.local with your credentials
 
-### Environment Variables
-
-```bash
-# .env.local
-
-# Data source
-VITE_DATA_SOURCE=shopify
-
-# Shopify Storefront API
-VITE_SHOPIFY_STORE=your-store.myshopify.com
-VITE_SHOPIFY_STOREFRONT_TOKEN=your_token
-
-# Cloudinary CDN
-VITE_CLOUDINARY_CLOUD=your_cloud_name
-
-# Stripe (optional for checkout)
-VITE_STRIPE_PUBLIC_KEY=pk_test_xxx
-STRIPE_SECRET_KEY=sk_test_xxx
-```
-
-### Development
-
-```bash
-# Start dev server
+# Run
 npm run dev
+```
 
-# Type check
-npm run typecheck
+### What You Need
 
-# Run tests
-npm test
+| Service | What to Get | Where |
+|---------|-------------|-------|
+| Shopify | Storefront API token | Admin → Sales Channels → Headless |
+| Shopify | Admin API token (optional) | Admin → Settings → Apps → Develop apps |
+| Cloudinary | Cloud name | Dashboard → Account Details |
+| Stripe | API keys | Dashboard → Developers → API keys |
 
-# Build for production
-npm run build
+See **[docs/SETUP.md](docs/SETUP.md)** for complete walkthrough.
+
+### Development Commands
+
+```bash
+npm run dev        # Start dev server (http://localhost:5173)
+npm run build      # Production build
+npm run typecheck  # TypeScript validation
+npm run lint       # ESLint check
+npm test           # Run tests
 ```
 
 ---
@@ -362,7 +347,23 @@ npm run build
 
 | Guide | Description |
 |-------|-------------|
-| [Shopify Protected Customer Data](docs/guides/shopify-protected-customer-data/README.md) | Complete guide to enabling customer data access for Shopify apps - from Partner account setup to API integration |
+| [Complete Setup Guide](docs/SETUP.md) | Step-by-step setup: Shopify tokens, Cloudinary, Stripe, deployment |
+| [Shopify Protected Customer Data](docs/guides/shopify-protected-customer-data/README.md) | Enable customer data access for Shopify apps |
+
+### Claude Code Skills
+
+This repo includes Claude Code skills for Shopify store management:
+
+```
+.claude/commands/
+├── orders.md           # Order management
+├── fulfillment.md      # Shipping & tracking
+├── analytics.md        # Sales reports
+├── bulk-products.md    # Mass product creation
+└── ... (14 more skills)
+```
+
+See [.claude/README.md](.claude/README.md) for the complete skill system.
 
 ---
 
